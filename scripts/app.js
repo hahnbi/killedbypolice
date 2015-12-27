@@ -71,7 +71,7 @@ app.filterData = function(filter) {
   // filter data
   _.each(app.categories[filter], function(c) {
     app.filteredData[c] = [];
-  })
+  });
   _.each(app.data, function(d) {
     app.filteredData[d[filter]].push(d);
   });
@@ -110,13 +110,13 @@ app.filterData = function(filter) {
   _.each(app.categories[filter], function(f, i) {
     var cls = filter === 'ageGroup' ? 'ageGroup' + f.replace(/[^\w]|_/g, "") : f.replace(/[^\w]|_/g, "");
     $($('.filter-category')[i]).attr('id', cls);
-  })
+  });
 
   // bind data for people
   _.each(app.categories[filter], function(col) { 
     var cls = filter === 'ageGroup' ? 'ageGroup' + col.replace(/[^\w]|_/g, "") : col.replace(/[^\w]|_/g, "");
     var people = d3.select('#' + cls + ' > .person-dots').selectAll('div').data(app.filteredData[col]);
-    var peopleEnter = people.enter().append('div').classed('person-dot', true).style('opacity', 0)
+    var peopleEnter = people.enter().append('div').classed('person-dot', true).style('opacity', 0);
     peopleEnter
       .transition()
         .duration(500)
@@ -179,7 +179,7 @@ app.loadData = function() {
         }
       });
     });
-  })
+  });
 };
 
 app.loadFilterHandlers = function() {
@@ -187,8 +187,8 @@ app.loadFilterHandlers = function() {
     app.filterData($(this).data('filter'));
     app.loadContentHeader($(this).data('filter'));
     app.makeActive($(this));
-  })
-}
+  });
+};
 
 // assign filter data to links
 app.loadLinks = function() {
@@ -204,11 +204,11 @@ app.makeActive = function($activeLink) {
     $(link).removeClass('filter-item-active');
   })
   $activeLink.addClass('filter-item-active');
-}
+};
 
 app.hidePersonCard = function() {
   $('.person-card').hide();
-}
+};
 
 app.showPersonCard = function(data) {
   $('.person-card').html(app.personCardTemplate(data));
@@ -216,9 +216,7 @@ app.showPersonCard = function(data) {
 };
 
 $(document).ready(function() {
-
     app.loadLinks();
     app.loadData();
     app.loadFilterHandlers();
-  
-})
+});

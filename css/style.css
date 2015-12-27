@@ -81,10 +81,6 @@ h4 {
   height: 100%;
 }
 
-.filter-category + .filter-category {
-  /*border-left: 1px solid #aaaaaa;*/
-}
-
 .filter-category h4 {
   float: left;
   width: 100%;
@@ -131,5 +127,4 @@ h5.filter-total{
 
 .person-card-header {
   font-weight: bold;
-
 }
