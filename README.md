@@ -3,8 +3,8 @@ d3.js visualization of the deaths from police encounters in 2015.
 
 ## Prerequisites
 - jQuery
-- underscore
-- d3
+- underscore.js
+- d3.js
 
 These can be installed by running `bower install` to install the files described in `bower.json`.
 
