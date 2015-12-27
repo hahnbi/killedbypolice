@@ -1,0 +1,130 @@
+body {
+  padding: 10px;
+  font-family: Oswald, sans-serif;
+  color: #333333;
+  background-color: #eeeeee;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Oswald, sans-serif;
+}
+
+h1 {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 48px;
+}
+
+h2 {
+  margin-top: 10px;
+  margin-bottom: 32px;
+  font-size: 32px;
+}
+
+h3 {
+  margin-top: 10px;
+  margin-bottom: 28px;
+  font-size: 28px;
+}
+
+h4 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  height: 30px;
+  text-align: center;
+}
+
+
+.nav {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.nav ul {
+  list-style-type: none;
+}
+
+.nav ul li {
+  display: inline;
+  margin: 0 5px 0 5px;
+  padding: 2px 5px 2px 5px;
+  cursor: pointer;
+}
+
+.nav ul li.filter-item-active {
+  background-color: #666666;
+  color: #dddddd;
+  border-radius: 7px;
+}
+
+.content {
+  overflow: auto;
+}
+
+.content-main {
+  float: left;
+  height: 700px;
+}
+
+.filter-category {
+  background-color: #efefef;
+  float: left;
+  padding: 10px;
+  width: 140px;
+  text-align: center;
+  height: 100%;
+}
+
+.filter-category + .filter-category {
+  /*border-left: 1px solid #aaaaaa;*/
+}
+
+.filter-category h4 {
+  float: left;
+  width: 100%;
+}
+
+h5.filter-total{
+  font-size: 40px;
+  float: left;
+  clear: left;
+  padding-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.person-dots {
+  width: 100%;
+  float: left;
+}
+
+.person-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #aaaaaa;
+  margin: 1px;
+  border-radius: 4px;
+  float: left;
+}
+
+.person-dot-active {
+  background-color: red;
+}
+
+.person-card {
+  background-color: #efefef;
+  width: 400px;
+  margin-left: 10px;
+  padding: 10px;
+  display: none;
+  float: left;
+  font-size: 18px;
+  font-family: Oswald, sans-serif;
+  line-height: 24px;
+}
+
+.person-card-header {
+  font-weight: bold;
+
+}
